@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a1a1a">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Digital-Дирижер — Showcase Demo</title>
+</head>
+<body>
+  <div class="app-container">
+    <div class="header">
+      <div style="font-size:20px;font-weight:bold;">Digital-Дирижер</div>
+      <div style="font-size:12px;color:#aaa;">SHOWCASE</div>
+    </div>
+
+    <div class="view active" style="display:flex;flex-direction:column;">
+      <h2 style="margin-top:0;">Демо интерфейса</h2>
+
+      <div class="zone-tabs">
+        <div class="zone-tab active-tab">Зал</div>
+        <div class="zone-tab">Беседки</div>
+        <div class="zone-tab">История</div>
+        <div class="zone-tab">Кабинет</div>
+      </div>
+
+      <div class="grid zone-grid active">
+        <div class="table active-table">1</div>
+        <div class="table">2</div>
+        <div class="table">3</div>
+        <div class="table vip-table">VIP</div>
+      </div>
+
+      <div style="margin-top:20px;background:#2d2d2d;border:1px solid #404040;border-radius:12px;padding:16px;">
+        <div style="font-weight:bold;margin-bottom:8px;">Что показывает эта публичная версия</div>
+        <div style="color:#ccc;line-height:1.5;">
+          • mobile-first PWA-интерфейс<br>
+          • offline-архитектура через Service Worker<br>
+          • управление столами и заказами<br>
+          • recommendation engine присутствует в приватной версии<br>
+          • коммерческая бизнес-логика и база рекомендаций не публикуются
+        </div>
+      </div>
+
+      <div class="smart-bar active" style="position:relative;bottom:auto;margin-top:18px;display:flex;">
+        <div class="rec-title">Контекстная подсказка — демо</div>
+        <div class="upsell-buttons-wrapper">
+          <div class="upsell-btn-group">
+            <button class="upsell-btn-add" type="button">+ Рекомендация</button>
+            <button class="upsell-btn-close" type="button">✖</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js'));
+    }
+  </script>
+</body>
+</html>

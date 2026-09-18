@@ -1,0 +1,17 @@
+{
+  "id": "/diriger-v1",
+  "name": "Digital-Дирижер",
+  "short_name": "Дирижер",
+  "start_url": "./index.html",
+  "scope": "/", 
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
