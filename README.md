@@ -1,31 +1,94 @@
 # Digital-Дирижер
 
-Public showcase of an offline-first PWA concept for restaurant order management.
+## Restaurant Sales Intelligence & Waiter Copilot
 
-## What this repository demonstrates
+Digital-Дирижер — offline-first PWA для HoReCa, созданное как инструмент повышения продаж и стандартизации работы официантов.
 
-- mobile-first PWA interface
-- offline support via Service Worker
-- table/order workflow concept
-- product thinking for HoReCa operations
-- public demo of the UI layer
+Главная идея проекта — не просто принимать заказы, а помогать официанту продавать эффективнее в реальном времени и одновременно превращать результат его работы в измеряемую аналитику.
 
-## Private components
+## Core Concept
 
-The production/prototype version also contains proprietary business logic, including:
+Order
+→ Context Analysis
+→ Upsell Recommendation
+→ Waiter Action
+→ Sale / Rejection
+→ Employee Analytics
+→ Management Insight
 
-- contextual upsell recommendation engine
-- gastronomic pairing rules
-- recommendation ranking logic
-- conversion / missed-opportunity tracking
-- internal menu dataset
+## Implemented
 
-These components are intentionally not published.
+- управление столами и заказами;
+- разделение позиций по гостям и курсам;
+- весовые позиции;
+- статусы отправки и подачи;
+- таймеры ожидания;
+- история чеков;
+- offline-first PWA architecture;
+- contextual upsell recommendation engine;
+- учёт показанных рекомендаций;
+- учёт принятых и отклонённых рекомендаций;
+- расчёт дополнительной выручки;
+- оценка потенциально упущенных продаж;
+- расчёт conversion / win rate;
+- аналитика по сотрудникам и периодам.
+
+## Recommendation Engine
+
+Система анализирует текущий заказ и формирует контекстные рекомендации непосредственно во время обслуживания гостя.
+
+В логике учитываются:
+
+- состав заказа;
+- гастрономические сочетания;
+- время добавления позиции;
+- стадия обслуживания;
+- отдельная dessert phase;
+- уже предложенные позиции;
+- принятые и отклонённые рекомендации.
+
+Коммерческая логика recommendation engine и база правил являются приватной частью проекта и не публикуются в данном showcase-репозитории.
+
+## Business Value
+
+Проект создавался как инструмент, способный уменьшить зависимость результата ресторана от опыта конкретного официанта.
+
+Официант получает подсказку в момент продажи, а менеджмент получает данные о том:
+
+- сколько рекомендаций было показано;
+- сколько было принято;
+- какую дополнительную выручку они принесли;
+- где потенциальные продажи были упущены;
+- как различается эффективность сотрудников.
+
+## Architecture Vision / Roadmap
+
+Следующий этап развития проекта предусматривает:
+
+- интеграцию с ресторанными POS/RMS-системами через API;
+- синхронизацию заказов и сотрудников;
+- локальный mini-PC / edge-server внутри ресторана;
+- работу устройств официантов внутри локальной сети;
+- снижение зависимости основной операционной логики от внешнего интернета;
+- отдельную административную панель;
+- централизованные обновления;
+- подключение внешнего контекста: погода, время суток, сезонность и зона посадки.
+
+Потенциальные интеграции рассматриваются с системами класса iiko, r_keeper и другими платформами, предоставляющими необходимые интеграционные интерфейсы.
+
+## Public Showcase
+
+Этот репозиторий является публичной демонстрационной версией.
+
+Полный production prototype содержит закрытую бизнес-логику, recommendation rules, внутренние данные и коммерческие алгоритмы, которые намеренно не публикуются.
 
 ## Tech
 
-HTML, CSS, JavaScript, PWA, Service Worker, LocalStorage (private version)
+HTML  
+CSS  
+JavaScript  
+PWA  
+Service Worker  
+LocalStorage  
 
-## Status
-
-Showcase/demo repository. Commercial logic is kept private.
+AI-assisted product development
